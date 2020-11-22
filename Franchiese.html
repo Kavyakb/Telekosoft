@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Meta Information -->
+    <meta name="author" content="Er. Tanzeel O. Ansari">
+    <meta name="description" content="Create Responsive Animated Website using HTML5, CSS3, Bootstrap & JavaScript">
+
+	<!-- Webpage Title -->
+    <title>Narasimha Telekosoft Group</title>
+
+    <!-- To ensure proper rendering and touch zooming in mobile phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN for Font Awesome Icons -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+    <!-- CDN for Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap (CSS) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- "Animate" Plugin to get Animation (But animation will start as soon as page loads) -->
+	<link rel="stylesheet" type="text/css" href="../../animate.min.css">
+	<!-- WOW Plugin to Start Animation on Scroll -->
+	<script type="text/javascript" src="../../javascript/wow.min.js"></script>
+	<!-- Start WOW() service -->
+	<script type="text/javascript">new WOW().init();</script>
+
+	<!-- External CSS Stylesheet -->
+<!--    <link href="layout.css" rel="stylesheet" type="text/css">-->
+    <style>
+                html{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+body{
+    background-color:darkblue;
+
+}
+.navbar-nav p {
+    color: #DC3545;
+    outline: none;
+    text-decoration: none !important;
+}
+
+nav,body,input,textarea{
+    font-family: Verdana,Geneva,sans-serif;
+}
+
+*, *::after{
+    transition: all 0.3s ease-in-out;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,.heading{
+    font-family: "Fira Code",monospace;
+    margin: 0;
+    line-height: normal;
+    font-weight: normal;
+}
+address{
+    font-style: normal;
+    font-weight: normal;
+}
+.font-xs{
+    font-size: 3rem;
+}
+
+.social-icon{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-icon a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    color: #32353C;
+    background-color: #FFF;
+    margin-left: 30px;
+    padding-left: 8px;
+}
+.social-icon li{
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding: 0;
+    line-height: normal;
+}
+.social-icon a:hover{
+    color: #FFF;
+}
+.faicon-facebook:hover{background-color: blue;}
+.faicon-instagram:hover{background-color: orangered;}
+.faicon-twitter:hover{background-color: blue;}
+.faicon-linkedin:hover{background-color:blue;}
+
+h1,h2,h3,h4,h5,h6,.heading{
+    font-family: "Fira Code",monospace;
+    margin: 0;
+    line-height: normal;
+    font-weight: normal;
+}
+.t3{
+   font-size: 30px;
+}
+#header header{height: 5rem;}
+#header a{color: inherit;}
+#header .t3{font-family: Ubuntu,sans-serif;font-weight: 800;}
+#header h1:hover{color: #28A745 !important; cursor: pointer;}
+@media screen and (max-width: 992px)
+{
+    #header h2{font-size: 2rem;}
+    #header .flex-row{flex-direction: column !important;}
+}
+@media screen and (max-width: 576px)
+{
+    #header h2{font-size: 5rem;}
+}
+#mainNavbar .nav-link:hover{background-color: rgba(220,53,69,0);
+font-size: 20px;}
+#mainNavbar .active{background-color: #DC3545;}
+
+#mainNavbar a.nav-link{padding: 1rem; margin-left: 0px;}
+#mainNavbar.navbar-dark .navbar-nav .nav-link:focus,
+#mainNavbar.navbar-dark .navbar-nav .nav-link:hover{color:white; background-color:cadetblue}
+
+
+#cover-image #pageintro{padding: 200px 0;}
+#cover-image #pageintro .heading{
+    font-family: 'Dancing Script',cursive;
+    font-size: 8rem;
+    font-weight: 800;
+}
+iframe{
+    width: 350px;
+    height: 300px;
+}
+#cover-image{
+    background: url(../../assets/cover.jpeg) fixed center no-repeat;
+    height: 600px;
+    background-size: cover;
+}
+.overlay{
+    color:blue;
+    position: relative;
+    z-index: 1;
+
+}
+.overlay::after{
+    background-color: rgba(100,0,0,0.3);
+    display: block;
+    position: absolute;
+    top: 0;left: 0;
+    height: 500px;
+    z-index: -1;
+    content: "";
+}
+
+.wrapper{
+    display: block;
+    position: relative;
+    margin: 0;padding: 0;
+    text-align: left;word-spacing: break-word;
+}
+@media screen and (max-width: 1200px)
+{
+    #pageintro .heading{font-size: 8rem !important;}
+}
+@media screen and (max-width: 992px)
+{
+    #pageintro .heading{font-size: 6rem !important;}
+    #pageintro.pl-5{padding-left: 0 !important;}
+}
+@media screen and (max-width: 768px)
+{
+    #pageintro .heading{font-size: 5rem !important;}
+       #pageintro.ml-5{padding-left: 0 !important;}
+}
+@media screen and (max-width: 576px)
+{
+    #pageintro .heading{font-size: 3rem !important;}
+       #pageintro.ml-5{padding-left: 0 !important;}
+    #pageintro .btn{height: 30px; width: 100px; font-size: 14px;}
+}
+#body-footer{
+    background-color: #32353C;
+}
+#body-footer .linklist li{
+    display: block;
+    margin-bottom: 15px;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid;
+    border-color: rgba(255,255,255,0.1);
+}
+#body-footer .linklist li:last-child{
+    margin: 0;padding: 0;border: none;
+}
+#body-footer .contact.linklist li{
+    position: relative;
+    padding-left: 40px;
+}
+#body-footer .contact li *{
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+}
+#body-footer .contact li i{
+    display: block;
+    position: absolute;
+    width: 30px;
+    font-size: 16px;
+    margin-left:
+}
+
+#backtotop{
+    z-index: 999;
+    display: inline-block;
+    position:fixed;
+    bottom: 20px;right: 20px;
+    width: 36px;height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 100px;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+}
+#backtotop i{
+        display: block;
+        width: 100px;
+        height: 100px;
+        line-height: inherit;
+}
+#backtotop.visible{
+        visibility: visible;
+        opacity: 0.5;
+}
+    #backtotop:hover{
+        opacity: 1;
+    }
+
+    #sticky-social-icon .float-sticky-bar li{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 4px 5px;
+        width: 150px;
+        position: fixed;
+        z-index: 999;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: flex-end;
+        left: -105px;
+        margin-top: 100px;
+    }
+    #sticky-social-icon .fab{
+        font-size: 20px;
+        color: #FFF;
+        padding: 10px 10px 10px 10px;
+        width: 35px;
+        margin-left: 2px;
+        background-color: black;
+    }
+    #sticky-social-icon .float-sticky-bar>li:hover{
+        left: 0;
+    }
+    #sticky-social-icon .float-sticky-bar>li>a{
+        color: #FFF !important;
+        text-decoration: none;
+        text-align: center;
+        line-height: 45px !important;
+        vertical-align: top !important;
+    }
+    #sticky-social-icon .position-fb{top: 160px;}
+    #sticky-social-icon .position-tw{top: 212px;}
+    #sticky-social-icon .position-in{top: 264px;}
+    #sticky-social-icon .position-li{top: 316px;}
+
+    .btn{
+    margin-bottom: 200px;
+    height: 40px;
+    font-family: sans-serif;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: black;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/* Create two columns that float next to eachother */
+#column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+        #contact1{
+            background-image: url(../../assets/22.jpeg);
+            margin-top: 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+label{
+  color: white;
+}
+</style>
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--
+<video autoplay muted loop id="myVideo">
+  <source src="v1.mp4" type="video/mp4">
+</video>
+-->
+    <div class="wrapper py-3 px-5 text-secondary bg-white" id="header">
+        <header class="d-flex flex-row" justify-content-between>
+            <h1 class="d-flex align-items-center">
+              <img src="../../assets/one.jpeg" height="100px" width="100px">
+               <a href="index.html" class="t3">Narasimha Telikosoft Groups</a>
+            </h1>
+        </header>
+
+    </div>
+
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary p-0" id="mainNavbar">
+            <a class="navbar-brand py-2 px-3" href="#home">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="mainNavbarContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Portfolio.html" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ContactUs.html" class="nav-link px-3">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Services.html" class="nav-link px-3">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="Franchiese.html" class="nav-link link-home">Franchise</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+   <div class="wrapper overlay" id="cover-image">
+       <div class="hor-cen ml-5 pl-5" id="pageintro">
+           <article class="ml-5">
+               <h3 class="heading">
+                   <q>Trust is our strength</q><br>
+                   <button type="button" class="btn btn-danger">Get Started</button>
+               </h3>
+           </article>
+           </div>
+   </div>
+   <div id="Franchise" class="tabcontent">
+  <div class="container" id="contact1">
+      <div class="row">
+      <div class="column">
+        <form action="../../php/Franchises.php" onsubmit="return validateemail() || phone()" name="form1">
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+          <label for="email">email</label>
+          <input type="text" id="email" name="email" placeholder="Your name.." required>
+
+          <label for="contact">Contact Number</label>
+          <input type="text" id="contact" name="contact" placeholder="Your contact Number..">
+
+          <label for="Address">Address</label>
+          <input type="text" id="address" name="address" placeholder="Your Address.." required>
+
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+</div>
+</div>
+<script>
+function validateemail()
+{
+var x=document.myform.email.value;
+var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+if(x.match(mailformat))
+{
+  alert("You have entered a valid email address!");
+  document.form1.text1.focus();
+  return true;
+}
+ else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+  alert("Please enter a valid e-mail address");
+  return false;
+  }
+}
+function phone()
+{
+var x=document.getElementById('contact').value
+console.log(x);
+if(x.length==10)
+{
+    alert("Phone number should have 10 digits");
+    return true;
+}
+else if (isNan(x)) {
+  alert("Phone number should be numbers");
+  return false;
+}
+else if (x.length<10) {
+    alert("Phone number should be less than 10 digits");
+  return false;
+}
+else if (x.length>10) {
+  document.getElementById('msg').innerHTML="Phone number should not be greater than 10 digits"
+  return false;
+}
+else if (x.charAt(0)<6) {
+  document.getElementById('msg').innerHTML="Indian Standard number starts from 7,8,9"
+  return false;
+}
+}
+</script>
+
+
+
+
+   <div class="container p-3 my-3 bg-dark text-white">
+    <div class="wrapper text-grey p-5" id="body-footer">
+    <footer class="row">
+        <div class="col-md-4 py-5" id="contact">
+
+            <h5 class="text-white py-3">You Can Reach Us At</h5>
+            <ul class="link-list contact">
+                <li><i class="fa fa-envolope"></i>enyes@yaraware.com</li>
+                 <li><i class="fa fa-phone"></i>&nbsp;9035698948</li>
+                 <li><i class="fa fa-map-marker"></i></li>
+                 <address>Narasimha Telikosoft Groups, 1st Floor , 2nd Cross Sahyadri Circle, hassan 573201
+                 <p>and Narasimha telikosoft Groups
+                     7QP2+6R, KM Rd, Gavanahalli Village, Mugthihalli, Karnataka 577133</p>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31064.568082479986!2d75.744505!3d13.283503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7435ef33ce72bc56!2sNarasimha%20telikosoft%20groups!5e0!3m2!1sen!2sus!4v1603801346394!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></address>
+            </ul>
+            <ul class="d-flex social-icon wow shake" data-wow-delay="0.5s">
+                  <li><a href="#" class="faicon-facebook rounded-circle"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#" class="faicon-facebook rounded-circle"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#" class="faicon-facebook rounded-circle"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="faicon-facebook rounded-circle"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+        </div>
+       </footer>
+        <div class="px-5" id="copyright">
+            <div class="d-flex justify-content-between">
+                <p>Copyright © 2020 Narasimha Telikosoft Groups — Primer WordPress theme by<br>GoDaddy</p>
+            </div>
+        </div>
+        <a href="#top" id="backtotop"><i class="fa fa-chevron-up"></i></a>
+
+</div>
+    </div>
+
+   <div class="wrapper" id="sticky-social-icon" data-wow-delay="0.5s">
+       <ul class="float-sticky-bar">
+           <li class="position-fb faicon-facebook">
+               <a href="#">Like us!</a>
+               <i class="fab fa-facebook"></i>
+           </li>
+           <li class="position-tw faicon-twitter">
+               <a href="#">Like us!</a>
+               <i class="fab fa-twitter"></i>
+           </li>
+           <li class="position-in faicon-instagram">
+               <a href="#">Like us!</a>
+               <i class="fab fa-instagram"></i>
+           </li>
+           <li class="position-li faicon-linkedin">
+               <a href="#">Like us!</a>
+               <i class="fab fa-linkedin"></i>
+           </li>
+       </ul>
+   </div>
+
+
+   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-4dd457a3-bfb4-4c13-94e3-193aa414b4cc"></div>
+
+
+
+
+
+    <!-- Bootstrap (JQuery) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Plugin (Popper.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap (JavaScript) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Position BackToTop button after cover image is scrolled up -->
+    <script type="text/javascript" src="../../javascript/backtotop.js"></script>
+
+    <!-- Make The Navigation Bar fixed on top once the header is scrolled up -->
+    <script type="text/javascript" src="../../javascript/navbar-fix-top.js"></script>
+
+    <!-- Position Sticky Social Bar after cover image is scrolled up -->
+    <script type="text/javascript" src="../../javascript/sticky-social-bar.js"></script>
+</body>
+</html>

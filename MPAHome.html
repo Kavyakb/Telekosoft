@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Malnad Poultry Assiciation</title>
+    <!-- Meta Information -->
+    <meta name="author" content="Er. Tanzeel O. Ansari">
+    <meta name="description" content="Create Responsive Animated Website using HTML5, CSS3, Bootstrap & JavaScript">
+
+    <!-- To ensure proper rendering and touch zooming in mobile phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN for Font Awesome Icons -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+    <!-- CDN for Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap (CSS) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- "Animate" Plugin to get Animation (But animation will start as soon as page loads) -->
+	<link rel="stylesheet" type="text/css" href="../../animate.min.css">
+	<!-- WOW Plugin to Start Animation on Scroll -->
+	<script type="text/javascript" src="../../javascript/wow.min.js"></script>
+	<!-- Start WOW() service -->
+	<script type="text/javascript">new WOW().init();</script>
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+    window.sr = ScrollReveal({
+    distance: '50px',
+    duration: 1000,
+    easing: 'ease',
+    mobile: true,
+    reset: true,
+    viewFactor: 0.4,
+  });
+</script>
+
+    <style>
+       html{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+
+}
+
+h1,h2,h3,h4,h5,h6,.heading{
+    font-family: "Fira Code",monospace;
+    margin: 0;
+    line-height: normal;
+    font-weight: normal;
+}
+.t3{
+   font-size: 30px;
+}
+#header header{height: 5rem;}
+#header a{color: inherit;}
+#header .t3{font-family: Ubuntu,sans-serif;font-weight: 800;}
+#header h1:hover{color: #28A745 !important; cursor: pointer;}
+@media screen and (max-width: 992px)
+{
+    #header h2{font-size: 2rem;}
+    #header .flex-row{flex-direction: column !important;}
+}
+@media screen and (max-width: 576px)
+{
+    #header h2{font-size: 5rem;}
+}
+
+.carousel-inner img {
+    width:1500px;
+    height:600px;
+  }
+#backtotop{
+    z-index: 999;
+    display: inline-block;
+    position:fixed;
+    bottom: 20px;right: 20px;
+    width: 36px;height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 100px;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+}
+#backtotop i{
+        display: block;
+        width: 100px;
+        height: 100px;
+        line-height: inherit;
+}
+#backtotop.visible{
+        visibility: visible;
+        opacity: 0.5;
+}
+    #backtotop:hover{
+        opacity: 1;
+    }
+        .social-icon{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-icon a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    color: #32353C;
+    background-color: #FFF;
+    margin-left: 30px;
+    padding-left: 8px;
+}
+.social-icon li{
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding: 0;
+    line-height: normal;
+}
+.social-icon a:hover{
+    color: #FFF;
+}
+.faicon-facebook:hover{background-color: blue;}
+.faicon-instagram:hover{background-color: orangered;}
+.faicon-twitter:hover{background-color: blue;}
+.faicon-linkedin:hover{background-color:blue;}
+
+        #sticky-social-icon .float-sticky-bar li{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 4px 5px;
+        width: 150px;
+        position: fixed;
+        z-index: 999;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: flex-end;
+        left: -105px;
+        margin-top: 100px;
+    }
+    #sticky-social-icon .fab{
+        font-size: 20px;
+        color: #FFF;
+        padding: 10px 10px 10px 10px;
+        width: 35px;
+        margin-left: 2px;
+        background-color: black;
+    }
+    #sticky-social-icon .float-sticky-bar>li:hover{
+        left: 0;
+    }
+    #sticky-social-icon .float-sticky-bar>li>a{
+        color: #FFF !important;
+        text-decoration: none;
+        text-align: center;
+        line-height: 45px !important;
+        vertical-align: top !important;
+    }
+    #sticky-social-icon .position-fb{top: 160px;}
+    #sticky-social-icon .position-tw{top: 212px;}
+    #sticky-social-icon .position-in{top: 264px;}
+    #sticky-social-icon .position-li{top: 316px;}
+
+        .card{
+            height: 200px;
+            width: 300px;
+        }
+        .red{
+            background-color: red;
+        }
+        h3{
+            color:aqua;
+        }
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif;
+    margin:0;
+        background-color: purple}
+
+.main-header {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-header h1 {
+  font-size: 25px;
+    font-weight: 600;
+  }
+
+.main-header h1 {
+  color: #b50d10;
+}
+
+.card1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+}
+
+.card1 img {
+  height: 320px;
+    width: 650px;
+  border-radius: 300px;
+    padding-right: 200px;
+
+}
+.card1 img:hover {
+  animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+        @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+        .card1 p{
+            color:white;
+            margin-left: -110x;
+            text-align:start;
+        }
+        .card2 a{
+            color:white;
+            margin-right: 100px;
+        }
+        .card2 a:hover{
+            color:blue;
+            margin-right: 100px;
+        }
+.card1 > div {
+  padding: 2rem;
+}
+
+.card1:nth-child(even) img {
+  order: 2;
+}
+
+@media(max-width:600px) {
+  .card1 {
+    display: block;
+  }
+}
+
+.column {
+  float: left;
+    margin-left: 180px;
+  padding: 5px;
+
+}
+.column img {
+  height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.column p {
+  text-align:match-parent;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+        .prodlist{
+            color:crimson;
+            background-color:cadetblue;
+        }
+        #row{
+            background-color: aliceblue;
+        }
+.tablink {
+  color:white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 20px;
+  margin-top:16px;
+
+}
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  height: 100%;
+}
+
+#Home {background-color:purple;}
+#AboutFounder {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
+.navbar-nav p{
+    width: 180px;
+    text-align: center;
+  }
+
+.carousel-inner{
+    max-width:100%;
+    height: 100%;
+  }
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
+
+
+.title {
+  font-size: 5.6rem;
+  font-family: 'Lobster', cursive;
+}
+
+#AboutFounder {
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+  color: #eee;
+  width: 100%;
+  height:800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  animation: animation 100s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+        #AboutFounder i:hover{
+            color:aqua;
+        }
+        #AboutFounder h2{
+            color:deeppink;
+        }
+        #found{
+            margin-top: 50px;
+            border-color:aqua;
+            border-radius: 20px;
+            float: right;
+            width: 400px;
+            text-align:justify;
+            color:darkturquoise;
+
+        }
+
+        #found1 i{
+            border-color:aqua;
+            border-radius: 20px;
+            float: left;
+            width: 400px;
+            text-align:justify;
+            color: darkorange;
+        }
+        #found2{
+            border-color:aqua;
+            border-radius: 20px;
+            float: right;
+            width: 400px;
+            text-align:justify;
+            color:crimson;
+        }
+         #contact1{
+            background-image: url(../../assets/22.jpeg);
+            margin-top: 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: black;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/* Create two columns that float next to eachother */
+#column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+        .navbar{
+            background-color: brown;
+            max-width: 100%;
+        } 
+.navbar:hover{
+  background-color:darkblue;
+}
+#ptag p{
+  font-size: 15px;
+  line-height: 15px;
+  color: white;
+    margin-left: 50px;
+}
+        #ptag h2{
+      margin-left: 50px;
+}
+        #ptag{
+            border-radius: 15px;
+            text-align:start;
+        }
+        #ptag1{
+            border-radius: 15px;
+        }
+        #ptag1 p{
+            border-radius: 15px;
+            text-align: center;
+           
+        }
+        #img1{
+            border-radius: 15px;
+        }
+ @media screen and (max-width: 600px) {
+     #img1 img{
+         margin-left: 50px;
+     }
+  }       
+</style>
+</head>
+<body>
+
+       <div class="wrapper py-3 px-5 text-secondary bg-white" id="header">
+        <header class="d-flex flex-row" justify-content-between>
+            <h2 class="d-flex align-items-center wow tada" data-wow-delay="0.5s">
+              <img src="../../assets/two.jpeg" height="100px" width="100px">
+               <a href="index.html" class="t3">Malnad Poulrty Associates</a>
+            </h2>
+        </header>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand pl-5" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item px-3 active">
+        <p class="tablink" onclick="openPage('Home', this,'blue')" id="defaultOpen">Home</p>
+      </li>
+      <li class="nav-item px-3">
+        <p class="tablink" onclick="openPage('AboutFounder', this, 'blue')" href="#">About Founder</p>
+      </li>
+      <li class="nav-item px-3">
+        <p class="tablink" onclick="openPage('Location', this, 'blue')" href="#">Location</p>
+      </li>
+      <li class="nav-item px-3">
+        <p class="tablink" onclick="openPage('Services', this, 'blue')" href="#">Services</p>
+      </li>
+      <li class="nav-item px-3">
+        <p class="tablink" onclick="openPage('Franchise', this, 'blue')" href="#">Franchise</p>
+      </li>
+      <li class="nav-item px-3">
+        <p class="tablink" onclick="openPage('Price Today', this, 'blue')" href="#">Poultry Price</p>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div id="Home" class="tabcontent">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../assets/13.jpeg" alt="Los Angeles">
+      <div class="carousel-caption">
+        <h3>Manad poultry associates</h3>
+        <h3>The strength of trust</h3>
+        <p>FOUNDED IN THE YEAR 1992 BY S S HIMAKAR</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/twelve.jpeg" alt="Chicago">
+      <div class="carousel-caption">
+        <h3>WHATS NEW:!!!!</h3>
+        <p>MALNAD POULTRY ASSOCIATES PROVIDE A WIDE RANGE OF SUPPORT FOR ORGANIC POULTRY RARING WHICH IS PAST AND THE FEATURE OF GLOBEL POULTRY AND EVEN IT SUPPORTS ORGANIC MILK,  ORGANIC SHEEPS AND GOAT RARING, ORGANIC AQUA CULTURING   AND OTHERS</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/15.jpeg" alt="New York">
+      <div class="carousel-caption">
+        <h3>WHATS NEW:!!!!</h3>
+        <p>So whatever your poultry treatment requirements, trust International Health Care’s wide-ranging solutions enumerated below and rest assured that your poultry animals are in safe hands:and that is through malnad poultry associates</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<header class="main-header">
+      <h1>WHATS NEW:!!!!</h1>
+</header>
+  <main class="container">
+      <section class="card1" data-aos="fade-right" >
+        <img src="../../assets/15.jpeg" alt="">
+          <div>
+          <p style="width: 400px" data-aos="fade-left">
+            MALNAD POULTRY ASSOCIATES PROVIDE A WIDE RANGE OF SUPPORT FOR ORGANIC POULTRY RARING WHICH IS PAST AND THE FEATURE OF GLOBEL POULTRY AND EVEN IT SUPPORTS ORGANIC MILK,  ORGANIC SHEEPS AND GOAT RARING, ORGANIC AQUA CULTURING   AND OTHERS<br><br>
+              <i>So whatever your poultry treatment requirements, trust International Health Care’s wide-ranging solutions enumerated below and rest assured that your poultry animals are in safe hands:and that is through malnad poultry associates</i>
+          </p>
+          </div>
+      </section>
+    </main>
+
+<header class="main-header"  data-aos="fade-left">
+      <h1>MALNAD POULTRY ASSOCIATES CAN BE A BEST DOCTOR FOR THE FOLLOWING DISESES:</h1>
+</header>
+   <main class="container px-5">
+      <section class="card2" data-aos="fade-right" >
+            <p><a href="http://www.poultryhub.org/health/disease/types-of-disease/list-of-avian-diseases/">List of avian diseases</a></p>
+            <p><a href="http://www.poultryhub.org/health/disease/types-of-disease/ascites/">Ascites</a></p>
+            <p><a href="http://www.poultryhub.org/health/disease/types-of-disease/2610-2/">Avian encephalomyelitisAvian </a></p>
+            <p><a href="">influenzaAvian  </a></p>
+            <p><a href="">Intestinal Spirochaetosis </a></p>
+            <p><a href="">Avian tuberculosisCannibalism (or aggressive pecking) </a></p>
+            <p><a href="">Chicken anaemia virus infection (or CAV)</a></p>
+            <p><a href="">ChlamydophilosisCoccidiosisColibacillosisCryptosporidiosisCandidiasis (or crop mycosis)</a></p>
+            <p><a href="">Egg drop syndrome (or EDS)</a></p>
+            <p><a href="">Fatty liver syndromeFowl cholera (or pasteurellosis)</a></p>
+            <p><a href="">Fowl pox </a></p>
+            <p><a href=""> HistomoniasisInclusion body hepatitis (or Fowl adenovirus type 8) </a></p>
+            <p><a href="">Infectious bronchitisInfectious bursal disease (or Gumboro) Infectious  </a></p>
+            <p><a href="">coryza   </a></p>
+            <p><a href="">Infectious laryngotracheitisLeg and skeletal problemsLice and mitesLymphoid  </a></p>
+            <p><a href="">Leukosis </a></p>
+            <p><a href="">Lymphoid  Tumour Disease (Reticuloendotheliosis)Marek’s DiseaseMycoplasmosis </a></p>
+            <p><a href="">Necrotic Enteritis </a></p>
+            <p><a href="">Newcastle Disease  </a></p>
+            <p><a href="">Parasitic worms (or Helminths)  </a></p>
+            <p><a href="">Rickets and cage layer fatigueToxoplasmosisTrichomoniasisViral Arthritis (Tenosynovitis)</a></p>
+      </section>
+    </main>
+
+<div class="prodlist" data-aos="zoom-in">
+    <center><h2>Products that available: All in one brand that is malnad poultry associates</h2></center>
+</div>
+<div class="container-fluid">
+<div class="row" id="row">
+  <div class="column" data-aos="flip-up">
+    <a href=""><img src="../../assets/1.jpg"><p>Livertonic</p></a>
+        <a href=""><img src="../../assets/2.png"><p>Growth promoter</p></a>
+        <a href=""><img src="../../assets/3.jpg"><p>B complex</p></a>
+        <a href=""><img src="../../assets/4.jpg"><p>Calcium</p></a>
+        <a href=""><img src="../../assets/5.jpg"><p>Kidney recovery medicines</p></a>
+  </div>
+  <div class="column" data-aos="zoom-in">
+        <a href=""><img src="../../assets/6.jpg"><p>Treatment for heartattack</p></a>
+        <a href=""><img src="../../assets/7.jpg"><p>Ranikat vaccines</p></a>
+        <a href=""><img src="../../assets/8.jpg"><p>Endrofloxin</p></a>
+        <a href=""><img src="../../assets/9.jpg"><p>Azithromyciin</p></a>
+        <a href=""><img src="../../assets/10.jpg"><p>Leoflaxin </p></a>
+
+  </div>
+  <div class="column" data-aos="flip-right">
+        <a href=""><img src="../../assets/11.jpg"><p>Brhomoxiline</p></a>
+        <a href=""><img src="../../assets/12.jpg"><p>Oxylin</p></a>
+        <a href=""><img src="../../assets/13.jpg"><p>Tretrociclin</p></a>
+        <a href=""><img src="../../assets/14.jpeg"><p>Amoxicillin</p></a>
+        <a href=""><img src="../../assets/15.jpg"><p>Vitamin a</p></a>
+    </div>
+  </div>
+</div>
+    </div>
+<div class="container-fluid">
+<div id="AboutFounder" class="tabcontent" data-aos="fade-right">
+<div id="found" class="pr-5">
+ <h2>About Founder</h2>
+  <p>S S HIMAKAR professionally who is an economist and an advocate founded malnad poutry associates in the year 1992  which will to have a support for the farmers  in the field of poultry.
+  Which gives him a huge range of support from more than 2000+ clients across the India.
+    </p></div> <br><br><br><br><br><br><br><br>
+    <div id="found1" class="p-5" data-aos="fade-right">
+<h2>Our Vision</h2>
+<i>Better  pharmaceuticals, for  Poultry and Veterinary, is the basis malnad poultry associates  vision. And by producing high quality health solutions that increase immunity of Animal Kingdom that the company is make it possible. Combining knowledge, skills and constant innovation is the mantra of this exclusive quality to respond to challenges in the animal healthcare industry. While malnad poultry associates vision and mission is to be a market leader in its chosen realm, one of the quality animal medicine manufacturers’ values aim to live up to the expectations of its esteemed customers, now and into the future.
+        </i></div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="found2" class="pr-5" data-aos="fade-right">
+<h2>Our strength</h2>
+<i>Malnad poulty associates strenght is our clients who belive in us and support us for willing to have a launching a wide range of new products
+</i>
+</div><br>
+    </div>
+    </div>
+<div id="Location" class="tabcontent">
+  <!-- <img src="..\..\assets\contact.PNG" alt="Norway" style="width:100%;">
+  <div class="text-block" data-aos="zoom-in">
+    <h4>Nature</h4>
+    <p>What a beautiful sunrise</p>
+</div> -->
+  <div class="container" id="contact1">
+    <div class="row">
+    <div class="column" id="column">
+      <img src="../../assets/19.jpeg" style="width:100%">
+    </div>
+    <div class="column">
+      <form name="myform" onsubmit="return validateemail();" action="..\..\php\connect.php">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email-id..">
+
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="Services" class="tabcontent">
+  <div class="container" id="contact1">
+      <div class="row">
+      <div class="column">
+        <form action="../../php/Franchises.php" onsubmit="return validateemail();" onsubmit="phone()">
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+          <label for="email">Email</label>
+          <input type="text" id="lname" name="email" placeholder="Your email..">
+
+          <label for="contact">Contact Number</label>
+          <input type="text" id="contact" name="contact" placeholder="Your contact Number..">
+          <span id="msg" style="color:red;"></span>
+          <label for="Address">Address</label>
+          <input type="text" id="address" name="address" placeholder="Your Address.." required>
+
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="Franchise" class="tabcontent">
+  <div class="container" id="contact1">
+      <div class="row">
+      <div class="column">
+        <form action="../../php/Franchises.php" onsubmit="return validateemail() || phone()" name="form1">
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+          <label for="email">email</label>
+          <input type="text" id="email" name="email" placeholder="Your name.." required>
+
+          <label for="contact">Contact Number</label>
+          <input type="text" id="contact" name="contact" placeholder="Your contact Number..">
+
+          <label for="Address">Address</label>
+          <input type="text" id="address" name="address" placeholder="Your Address.." required>
+
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="container">
+<div id="Price Today" class="tabcontent" data-aos="fade-right">
+
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;" id="img1">
+    <img src="../../assets/broiler.jpg" height="320px" width="350px" style="border-radius: 15px" >
+    </div>
+    <div class="col-sm-4" style="background-color:darkgreen" id="ptag">
+       <h2 style="color: blue">Broiler Chicken</h2><br>
+        <p>RS 120/Kilogram</p>
+        <p>Usage: Restaurant</p>
+        <p>Packaging Type: Poly Bag</p>
+        <p>Protein: 21 g</p>
+        <p>Total Fat: 17g</p>
+        <p>Iron: 3.3mg</p>
+        <p>Country of Origin: Made in India</p>
+    </div>
+    <div class="col-sm-4 p-3" style="background-color:lightcoral;" id="ptag1">
+       <p>Call us for order</p>
+        <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9886604156</p>
+          <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481959923</p>
+          <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481077051</p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;" id="img1">
+    <img src="../../assets/baby.jpg" height="320px" width="350px" style="border-radius: 15px">
+    </div>
+    <div class="col-sm-4 p-3" style="background-color:darkgreen" id="ptag">
+       <h2 style="color: blue">Chicks Price</h2><br>
+        <p>RS 120/Kilogram</p>
+        <p>Usage: Restaurant</p>
+        <p>Packaging Type: Poly Bag</p>
+        <p>Protein: 21 g</p>
+        <p>Total Fat: 17g</p>
+        <p>Iron: 3.3mg</p>
+        <p>Country of Origin: Made in India</p>
+    </div>
+    <div class="col-sm-4" style="background-color:lightcoral;" id="ptag1">
+       <p>Call us for order</p>
+        <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9886604156</p>
+          <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481959923</p>
+          <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481077051</p>
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;" id="img1">
+    <img src="../../assets/egg.jpg" height="320px" width="350px" style="border-radius: 15px">
+    </div>
+    <div class="col-sm-4" style="background-color:darkgreen" id="ptag">
+       <h2 style="color: blue">Egg</h2><br>
+        <p>RS 120/plate</p>
+        <p>Packaging Type: crate</p>
+        <p>Country of Origin: Made in India</p>
+    </div>
+    <div class="col-sm-4" style="background-color:lightcoral;" id="ptag1">
+       <p>Call us for order</p>
+        <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9886604156</p>
+          <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481959923</p>
+          <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481077051</p>
+    </div>
+  </div>
+</div>
+    </div>
+
+   <script>
+AOS.init({
+        offset: 400, // offset (in px) from the original trigger point
+        delay: 1, // values from 0 to 3000, with step 50ms
+        duration: 1000 // values from 0 to 3000, with step 50ms
+      });
+    </script>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+function validateemail()
+{
+var x=document.myform.email.value;
+var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+if(x.match(mailformat))
+{
+  alert("You have entered a valid email address!");
+  document.form1.text1.focus();
+  return true;
+}
+ else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+  alert("Please enter a valid e-mail address");
+  return false;
+  }
+}
+function phone()
+{
+var x=document.getElementById('contact').value
+console.log(x);
+if(x.length==10)
+{
+    alert("Phone number should have 10 digits");
+    return true;
+}
+else if (isNan(x)) {
+  alert("Phone number should be numbers");
+  return false;
+}
+else if (x.length<10) {
+    alert("Phone number should be less than 10 digits");
+  return false;
+}
+else if (x.length>10) {
+  document.getElementById('msg').innerHTML="Phone number should not be greater than 10 digits"
+  return false;
+}
+else if (x.charAt(0)<6) {
+  document.getElementById('msg').innerHTML="Indian Standard number starts from 7,8,9"
+  return false;
+}
+}
+</script>
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-4dd457a3-bfb4-4c13-94e3-193aa414b4cc"></div>
+
+    <div class="container p-3 my-3 bg-dark text-white">
+    <div class="wrapper text-grey p-5" id="body-footer">
+    <footer class="row">
+        <div class="col-md-4 py-5" id="contact">
+
+            <h5 class="text-white py-3">You Can Reach Us At</h5>
+            <ul class="link-list contact">
+                 <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9886604156</p>
+                 <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481959923</p>
+                 <p><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; +91 9481077051</p>
+                 <p><i class="fa fa-map-marker"></i></p>
+                 <address>Malnad poultry associates
+                  2nd cross opp A&A complex
+                  Hemavathi hospital road
+                  Sahyadri circle
+                   Hassan 573201
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.60111912113!2d76.0986966!3d13.0101627!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x32e7a82227122918!2sMalnad%20Poultry%20Associates!5e0!3m2!1sen!2sin!4v1605005107125!5m2!1sen!2sin" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></address>
+            </ul>
+            <ul class="d-flex social-icon wow shake" data-wow-delay="0.5s">
+                  <li><a href="https://www.facebook.com/pages/category/Product-Service/Malnad-Poultry-Associates-114027746807422/
+                  "class="faicon-facebook rounded-circle"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#" class="faicon-facebook rounded-circle"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#" class="faicon-facebook rounded-circle"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="faicon-facebook rounded-circle"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+        </div>
+       </footer>
+        <div class="px-5" id="copyright">
+            <div class="d-flex justify-content-between">
+                <p>Copyright © 2020 Narasimha Telikosoft Groups — Primer WordPress theme by<br>GoDaddy</p>
+            </div>
+        </div>
+        <a href="#top" id="backtotop"><i class="fa fa-chevron-up"></i></a>
+
+</div>
+    </div>
+
+
+    <div class="wrapper" id="sticky-social-icon" data-wow-delay="0.5s">
+       <ul class="float-sticky-bar">
+           <li class="position-fb faicon-facebook">
+               <a href="#">Like us!</a>
+               <i class="fab fa-facebook"></i>
+           </li>
+           <li class="position-tw faicon-twitter">
+               <a href="#">Like us!</a>
+               <i class="fab fa-twitter"></i>
+           </li>
+           <li class="position-in faicon-instagram">
+               <a href="#">Like us!</a>
+               <i class="fab fa-instagram"></i>
+           </li>
+           <li class="position-li faicon-linkedin">
+               <a href="#">Like us!</a>
+               <i class="fab fa-linkedin"></i>
+           </li>
+       </ul>
+   </div>
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap (JQuery) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Plugin (Popper.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap (JavaScript) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Position BackToTop button after cover image is scrolled up -->
+    <script type="text/javascript" src="../../javascript/backtotop.js"></script>
+    
+    <script type="text/javascript" src="../../javascript/aos.js"></script>
+    <!-- Make The Navigation Bar fixed on top once the header is scrolled up -->
+    
+    <script type="text/javascript" src="../../javascript/navbar.js"></script>
+
+    <!-- Position Sticky Social Bar after cover image is scrolled up -->
+    <script type="text/javascript" src="../../javascript/sticky-social-bar.js"></script>
+
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>

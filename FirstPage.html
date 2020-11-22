@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta name="author" content="Er. Tanzeel O. Ansari">
+    <meta name="description" content="Create Responsive Animated Website using HTML5, CSS3, Bootstrap & JavaScript">
+
+	<!-- Webpage Title -->
+    <title>Responsive Bootstrap Website with Animation | Example 8</title>
+
+    <!-- To ensure proper rendering and touch zooming in mobile phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN for Font Awesome Icons -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+    <!-- CDN for Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap (CSS) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- "Animate" Plugin to get Animation (But animation will start as soon as page loads) -->
+	<link rel="stylesheet" type="text/css" href="../animate.min.css">
+	<!-- WOW Plugin to Start Animation on Scroll -->
+	<script type="text/javascript" src="../javascript/wow.min.js"></script>
+	<!-- Start WOW() service -->
+	<script type="text/javascript">new WOW().init();</script>
+
+    <style>
+        
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    
+	height: 100%;
+	 max-height: 600px; 
+	background-color: hsla(200,40%,30%,.4);
+	background-image:		
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 50s para infinite linear;
+	}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
+	}
+
+        .since h1 {
+    color: blue;
+    font-family: sans-serif;
+    animation-name: animate;
+    animation-duration: 10s;
+}
+@keyframes animate{
+    from{color: red};
+    to{color: darkgoldenrod};
+}
+.logo img{
+    height: 200px;
+    width: 200px;
+    border-radius: 500px;
+    margin-left: 40px;
+}
+ .flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;  
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front img {
+  color: black;
+    border-radius: 30px;
+}
+
+.flip-box-back img {
+  color: white;
+  transform: rotateY(180deg);
+    border-radius: 30px;
+}
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+@media screen and (max-width: 600px) {
+     .flip-box-front img{
+         margin-left: -350px;
+         height: 200px;
+         width: 200px;
+     }
+         .flip-box-front h2{
+         font-size: 25px;
+     }
+    .flip-box-back img{
+         margin-left: -350px;
+         height: 200px;
+         width: 200px;
+     }
+    .logo img{
+        height: 100px;
+        width: 100px;
+    }
+    
+  }
+        .row{
+            margin-left: 150px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+    window.sr = ScrollReveal({
+    distance: '50px',
+    duration: 1000,
+    easing: 'ease',
+    mobile: true,
+    reset: true,
+    viewFactor: 0.4,
+  });
+</script>
+    </head>
+<body>
+<br>
+<div class="container-fluid">
+ <header class="logo">
+     <img src="../assets/logo.jpeg">
+     <div class="since">
+      <h1 class="text" data-aos="fade-right">Since 25 Years</h1>
+</div>
+</header>
+     <div>
+     <div class="container">
+<div class="row"> 
+<div class="col-sm-6">   
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <a href="..\First\html\index.html"><img src="../assets/one.jpeg" width="300px" height="300px"><h2>Narasimha Telekosoft Groups</h2></a>
+    </div>
+    <div class="flip-box-back">
+      <a href="..\First\html\index.html"><img src="../assets/one.jpeg" width="300px" height="300px"><h2>Narasimha Telekosoft Groups</h2></a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6"> 
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+     
+      <a href="..\First\html\MPAHome.html"><img src="../assets/two.jpeg" width="300px" height="300px"><h2>Malnad Poultry Association</h2></a>
+    </div>
+    <div class="flip-box-back">
+      <a href="..\First\html\MPAHome.html"><img src="../assets/two.jpeg" width="300px" height="300px"><h2>Malnad Poultry Association</h2></a>
+    </div>
+  </div>
+</div>
+</div> 
+</div> 
+
+</div>
+</div>
+    </div>
+ 
+ <!-- Bootstrap (JQuery) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Plugin (Popper.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap (JavaScript) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
